@@ -1,0 +1,8 @@
+http://facebook.github.io/react/docs/getting-started.html
+
+<!--核心库-->
+<script src="build/react.js"></script>
+<!--组件渲染到DOM中-->
+<script src="build/react-dom.js"></script>
+<!-- jsx转换javascript语法脚本库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
