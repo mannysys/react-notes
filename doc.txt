@@ -1,8 +1,8 @@
 http://facebook.github.io/react/docs/getting-started.html
 
-<!--ºËÐÄ¿â-->
+<!--æ ¸å¿ƒåº“-->
 <script src="build/react.js"></script>
-<!--×é¼þäÖÈ¾µ½DOMÖÐ-->
+<!--ç»„ä»¶æ¸²æŸ“åˆ°DOMä¸­-->
 <script src="build/react-dom.js"></script>
-<!-- jsx×ª»»javascriptÓï·¨½Å±¾¿â -->
+<!-- jsxè½¬æ¢javascriptè¯­æ³•è„šæœ¬åº“ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
