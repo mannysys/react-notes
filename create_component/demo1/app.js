@@ -4,7 +4,7 @@
 //        alert('ok text mixins!' + this.props.group);
 //    }
 //};
-//
+
 //const Item = React.createClass({
 //
 //    // 是设置组件的名字,这个可以作为测试,在渲染时react内部会自动设置的
