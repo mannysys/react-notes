@@ -1,0 +1,30 @@
+组件生命周期：
+1）
+init     - 组件初始化
+    //针对于一个类的 React.createClass()
+    defaultProps  -> getDefaultProps(){ return {group: 123} }
+
+    //针对组件实列调用一次
+    state 状态  ->getInitialState(){ return {} }  / ES6 constructor(){ this.state={} }
+
+2）
+mount    - 组件装载
+    will 装载之前
+    did  装载之后
+
+3）
+update   - 组件更新，调用多次（其它只调用一次）
+
+    调用render的时候更新值
+    render(info){
+        <Item group={info}/>
+    }
+
+    render(123);
+
+    render(abc);
+
+4）
+unmount  - 组件卸载
+
+    will
