@@ -1,5 +1,6 @@
 组件生命周期：
-1）
+
+1）初始化阶段
 init     - 组件初始化
     //针对于一个类的 React.createClass()
     defaultProps  -> getDefaultProps(){ return {group: 123} }
@@ -7,13 +8,18 @@ init     - 组件初始化
     //针对组件实列调用一次
     state 状态  ->getInitialState(){ return {} }  / ES6 constructor(){ this.state={} }
 
-2）
-mount    - 组件装载
-    will 装载之前
-    did  装载之后
 
-3）
-update   - 组件更新，调用多次（其它只调用一次）
+2）装载阶段
+mount    - 组件加载
+    componentWillMount 加载之前
+        state   操作：更改状态
+    componentDidMount  加载之后（render组件渲染之后）
+        dom     操作：dom元素
+
+
+
+3）更新阶段（可以调用多次，其它阶段都只调用一次）
+update   - 组件更新
 
     调用render的时候更新值
     render(info){
@@ -24,7 +30,9 @@ update   - 组件更新，调用多次（其它只调用一次）
 
     render(abc);
 
-4）
+
+
+4）卸载阶段
 unmount  - 组件卸载
 
-    will
+    componentWillUnmount   组件卸载之前调用该内部方法,做一些清理工作
