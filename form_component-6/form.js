@@ -40,7 +40,7 @@ const Form = React.createClass({
         this.setState({selectValue: event.target.value});
     },
     changeManySelectHandle(event){
-        this.setState({arr: event.target.value.push});
+        this.setState({arr: this.state.arr.push(event.target.value)});
     },
 
     // 如果在input使用value的话，需要写对应的内部状态值，进行更新
