@@ -1,0 +1,4 @@
+
+1、尽量用 props ，无状态 state <Item data={} />  <div id="id001"></div>
+2、最小化 state ，如果自身需要渲染的话使用state
+3、props vs state 相互配合，如果有计算的过程放到渲染 render 中处理

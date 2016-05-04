@@ -3,10 +3,12 @@
  */
 
 /*
-
   组件之间的通信
-
 */
+
+// 创建事件总线对象
+const eventbus = new eventemitter.EventEmitter();
+
 
 const Item = React.createClass({
 
@@ -27,6 +29,11 @@ const Comp = React.createClass({
     },
 
     componentWillMount(){
+        //监听事件
+        this.props.bus.on('test event', ()=>{
+            console.log('test event' + this.props.name);
+        });
+
         this.state.list = this.props.data.map(item=>{
            return {name: item, actived: false}
         });
@@ -65,12 +72,22 @@ const list = [
 ]
 
 
-ReactDOM.render(<Comp data={list}/>, document.body);
+ReactDOM.render(
+    <div>
+        <Comp bus={eventbus} name="comp one" data={list}/>
+        <Comp bus={eventbus} name="comp two" data={list}/>
+    </div>
+    , document.body);
 
 
+setTimeout(function(){
+    //触发激活事件
+   eventbus.emit('test event');
+
+},5000);
 
 
-
+//bower install eventemitter
 
 
 

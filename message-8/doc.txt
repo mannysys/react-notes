@@ -1,0 +1,5 @@
+
+事件总线通信(通过事件交流,父与子组件通信)
+
+安装工具eventemitter
+bower install eventemitter

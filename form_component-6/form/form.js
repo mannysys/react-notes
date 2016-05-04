@@ -40,9 +40,16 @@ const Form = React.createClass({
         this.setState({selectValue: event.target.value});
     },
     changeManySelectHandle(event){
-
-        this.setState({arr: this.state.arr.push(event.target.value)});
-
+        let arr = [];
+        let options = this.refs.myselect.children;
+        for(let i=0,len=options.length; i < len;i++){
+            if(options[i].selected){
+                arr.push(options[i].value);
+            }
+        }
+        this.setState({arr});
+        this.forceUpdate();
+        console.log(this.state.arr);
     },
 
     // 如果在input使用value的话，需要写对应的内部状态值，进行更新
@@ -60,7 +67,7 @@ const Form = React.createClass({
                 <option value="B">B</option>
                 <option value="C">C</option>
             </select>
-            <select multiple value={this.state.arr} onChange={this.changeManySelectHandle}>
+            <select multiple={true} ref="myselect" value={this.state.arr} onChange={this.changeManySelectHandle}>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
