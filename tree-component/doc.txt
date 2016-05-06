@@ -1,0 +1,7 @@
+
+jsx 转换成 js代码
+转码工具
+npm install --save-dev babel-preset-es2015 babel-preset-react
+
+
+树组件开发实战
