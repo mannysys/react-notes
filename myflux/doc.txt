@@ -1,0 +1,24 @@
+
+ 1.
+ 安装react
+ npm install react react-dom --save
+
+ 安装react转码的工具
+ npm install browserify babelify babel-cli babel-preset-es2015 babel-preset-react --save-dev
+
+
+ 2.
+ package.json 中scripts添加脚本:
+
+ 编译react脚本命令
+ "compile":"babel --presets react,es2015 src -d dest",
+
+ 编译命令
+ npm run compile
+
+
+ 浏览器编译
+ "browser":"browserify src/main.js -o build.js -t [ babelify --presets [react es2015] ]",
+
+ 浏览器编译命令
+ npm run browser
